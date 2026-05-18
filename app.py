@@ -107,4 +107,11 @@ def predict():
 
 
 if __name__ == "__main__":
-    app.run(debug=True, port=5000)
+    import threading
+
+    # Only run the Flask server when executing in the main interpreter thread.
+    # This avoids calling signal handlers (used by the reloader) from non-main
+    # threads which raises "ValueError: signal only works in main thread" when
+    # Streamlit executes this file in a worker thread.
+    if threading.current_thread() is threading.main_thread():
+        app.run(host="0.0.0.0", port=5000, debug=False, use_reloader=False)
