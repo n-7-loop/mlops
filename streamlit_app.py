@@ -30,7 +30,7 @@ def load_artifacts():
 model, scaler, encoders, load_err = load_artifacts()
 
 st.set_page_config(page_title="Sale total estimator", layout="centered")
-st.title("Predict checkout total — Streamlit")
+st.title("Predict checkout total — Developed by Ayma")
 
 if load_err:
     st.error(f"Error loading model artifacts: {load_err}")
