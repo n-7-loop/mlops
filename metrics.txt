@@ -1,0 +1,21 @@
+Retail sales total_price regression - model performance
+==================================================
+
+Model: LinearRegression
+MAE: 30.3347
+RMSE: 39.0829
+R2 Score: 0.8636
+----------------------------------------
+
+Model: RandomForest
+MAE: 3.1277
+RMSE: 4.6579
+R2 Score: 0.9981
+----------------------------------------
+
+Model: SVR
+MAE: 64.4849
+RMSE: 89.5318
+R2 Score: 0.2843
+----------------------------------------
+
